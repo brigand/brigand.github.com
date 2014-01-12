@@ -23,12 +23,12 @@
 # url : http://thedereck.github.io
 # email : thedereck@thedereck.com
 # author : Dereck Curry
-name : gh-pages-blog
-brand : gh-pages-blog
-description : The Official gh-pages-blog GitHub Page
-url : http://thedereck.github.io/gh-pages-blog
-email : thedereck@thedereck.com
-author: Dereck Curry
+name : blogalog
+brand : brigand's blogalog
+description : blog about JavaScript and stuff
+url : http://brigand.github.io/
+email : f.bagnardi@gmail.com
+author: Frankie Bagnardi
 
 
 # The following is a list of files to exclude from inclusion in the
@@ -179,7 +179,7 @@ sections:
   social_links :
     enabled : false
   github_projects :
-    enabled : false
+    enabled : true
   external_links :
     enabled : true
   archive :
