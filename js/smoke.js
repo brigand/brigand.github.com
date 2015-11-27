@@ -29,15 +29,16 @@ function init() {
   scene.add(light);
 
   smokeTexture = THREE.ImageUtils.loadTexture('smoke.png');
-  smokeMaterial = new THREE.MeshLambertMaterial({color: 0xffffff, map: smokeTexture, transparent: true});
+  smokeMaterial = new THREE.MeshLambertMaterial({color: 0x30a0ff, map: smokeTexture, transparent: true});
   smokeGeo = new THREE.PlaneGeometry(300,300);
   smokeParticles = [];
 
 
   for (p = 0; p < 150; p++) {
     var particle = new THREE.Mesh(smokeGeo,smokeMaterial);
-    particle.position.set(Math.random()*500-250,Math.random()*500-250,Math.random()*1000-100);
+    particle.position.set(Math.random()*500-250,Math.random()*300-300,Math.random()*1000-100);
     particle.rotation.z = Math.random() * 360;
+    particle.direction = Math.random() > 0.5;
     scene.add(particle);
     smokeParticles.push(particle);
   }
@@ -58,7 +59,8 @@ function animate() {
 function evolveSmoke() {
   var sp = smokeParticles.length;
   while(sp--) {
-    smokeParticles[sp].rotation.z += (delta * 0.2);
+    var particle = smokeParticles[sp];
+    particle.rotation.z += (delta * 0.2);
   }
 }
 
