@@ -1,91 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-
-    <title>Frankie Bagnardi</title>
-    <meta name="description" content="Frankie Bagnardi" />
-    <meta name="author" content="Frankie Bagnardi" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Frankie Bagnardi - brigand</title>
+    <link rel="stylesheet" href="https://use.typekit.net/bhv4vqu.css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" />
     <style>
       html,
       body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        font-family: Arial, sans;
-      }
-
-      html {
-        background-color: #f9f9ff;
+        background: hsl(-177, 70%, 43.3%);
+        font-family: 'PT Sans', Noteworthy, graphite-std, sans-serif;
       }
 
       body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 16px;
+        font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1440 - 300)));
       }
 
-      main {
+      .font-alt {
+        font-family: Noteworthy, graphite-std, sans-serif;
+      }
+
+      a {
+        color: #1b143f;
+      }
+      * {
+        font-family: inherit;
+        font-weight: innherit;
+      }
+
+      #main {
         width: 30em;
-        max-width: 95vw;
-        background: white;
-        box-shadow: 0 0 3px #666;
-        padding: 1em;
-        border-radius: 1em;
+        max-width: 95%;
+        margin: 9em auto;
+        display: flex;
+        flex-direction: column;
         position: relative;
       }
 
-      main::after {
+      .block-letters {
+        display: flex;
+      }
+
+      h1#username {
+        font-size: 1.5em;
+        margin: 0 auto;
+      }
+
+      .block-letters > * {
+        display: flex;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
+        justify-content: center;
+        align-content: center;
+        background: black;
+        color: white;
+        margin: 0.2em;
+        position: relative;
+      }
+
+      .block-letters > *:nth-child(1) {
+        transform: translateZ(0) rotate(1deg);
+        color: white;
+        background: black;
+        top: 0;
+      }
+
+      .block-letters > *:nth-child(2) {
+        width: 1.23em;
+        transform: translateZ(0) rotate(5deg);
+        color: black;
+        background: white;
+        top: 0;
+      }
+
+      .block-letters > *:nth-child(3) {
+        width: 1.1em;
+        transform: translateZ(0) rotate(-4deg);
+        color: white;
+        background: black;
+        top: 0.1em;
+      }
+
+      .block-letters > *:nth-child(4) {
+        width: 1.1em;
+        line-height: 1.2;
+        transform: translateZ(0) scaleY(1.1) rotate(-4deg);
+        color: white;
+        background: black;
+        top: 0.1em;
+      }
+
+      .block-letters > *:nth-child(5) {
+        width: 1.5em;
+        line-height: 1.4em;
+        transform: translateZ(0) rotate(5deg);
+        color: white;
+        background: hsl(-177, 70%, 43.3%);
+        box-shadow: inset 0 0 0 0.14em black;
+        top: 0.1em;
+      }
+
+      .block-letters > *:nth-child(6) {
+        transform: translateZ(0) scale(0.82) rotate(-4deg);
+        transform-origin: 50% 90%;
+        color: black;
+        background: white;
+        top: 0;
+      }
+
+      .block-letters > *:nth-child(7) {
+        padding-top: 0.2em;
+        transform-origin: 0 0;
+        transform: translateZ(0) scaleX(0.75) rotate(3deg);
+        color: white;
+        background: black;
+        top: 0;
+        margin-right: 0;
+      }
+
+      #name {
+        position: relative;
+        letter-spacing: 0.4em;
+        margin: 0.6em auto 0;
+        left: 0.6em;
+        font-weight: 100;
+        font-size: 1.2em;
+        white-space: nowrap;
+        color: white;
+        text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black,
+          1px 1px 2px red, 1px 1px 2px, 1px 1px 2px white, 2px 2px 2px black,
+          2px 2px 2px black, 2px 2px 2px black;
+      }
+
+      #name > h2 {
+        font-size: 1em;
+      }
+
+      .icon {
+        font-size: 2.8em;
+        width: 1em;
+        height: 1em;
+        display: flex;
+        position: relative;
+      }
+
+      .icon > svg {
+        width: 1em;
+        height: 1em;
+      }
+
+      .float-first::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+
+      .float-first > :first-child {
+        float: left;
+        margin-right: 1.3rem;
+      }
+
+      section {
+        margin: 1.2em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1 id="username" class="block-letters">
+        <span>b</span> <span>r</span> <span class="font-alt">i</span> <span>g</span>
+        <span>a</span> <span>n</span> <span>d</span>
+      </h1>
+
+      <div id="name">
+        <h2>Frankie Bagnardi</h2>
+      </div>
+      <section class="float-first">
+        <div class="icon">
+          <svg viewBox="0 0 420 507" alt="rust logo">
+            <polygon
+              id="Main_Block"
+              data-name="Main Block"
+              points="0 0 39 454 208 507 383 455 420 0 0 0"
+              fill="#000"
+            />
+            <polygon
+              id="Back_S"
+              data-name="Back S"
+              points="212 42 212 470 349 431 381 42 212 42"
+              fill="#fff"
+            />
+            <polygon
+              id="Letter_S"
+              data-name="Letter S"
+              fill="#000"
+              points="227 99 227 294 308 279 308 320 227 345 227 398 340 365 351 221 270 231 268 150 356 152 361 99 227 99"
+            />
+            <polygon
+              id="Letter_J"
+              data-name="Letter J"
+              points="192 99 194 398 72 361 72 310 151 330 153 99 192 99"
+              fill="#fff"
+            />
+          </svg>
+        </div>
+
+        <p>
+          I've been writing JavaScript for many years, moving from building web apps
+          with jQuery to Knockout.js to AngularJS. Today I mainly use React.js, which
+          I began learning in early 2014. While I specialize in frontend, I spend a
+          good chunk of my time writing server code.
+        </p>
+
+        <p>
+          Most of my open source work is JS library development. My
+          <a href="https://github.com/brigand" rel="noopener noreferer"
+            >Github profile</a
+          >
+          shows some of the projects I've worked on.
+        </p>
+      </section>
+
+      <section class="float-first">
+        <div class="icon">
+          <svg viewBox="0 0 509.99 510" alt="rust logo">
+            <path
+              id="Background"
+              d="M56,325a245.881,245.881,0,0,1-14-77c-.346-20.109-.8-46.6,11-75,14.537-34.988,39.424-53.032,78-81,31.916-23.139,59.544-42.666,101-48,25.048-3.223,44.471.108,55,2,45.019,8.087,113.474,36.268,153,105,35.951,62.515,27.949,123.759,25,144-3.4,23.349-12.581,86.363-65,129-33.312,27.1-68.361,33.17-102,39-38.483,6.67-85.942,14.895-136-8C90.539,422.316,64.695,349.5,56,325Z"
+              fill="#fff"
+            />
+            <g id="LogoMain">
+              <path
+                id="path3"
+                d="M486.1,237.49l-.609-6.237,20.6-23.988L477.929,193l-1.842-6.072,15.5-27.506-30.425-8.488-2.982-5.569,9.848-30.03-31.555-2.393-3.976-4.824,3.82-31.423L404.9,80.513l-4.834-3.976-2.387-31.555-30.021,9.847-5.569-2.987-8.5-30.429-27.516,15.5-6.061-1.836L305.754,6.9,281.771,27.513l-6.237-.609L256.014,2,236.5,26.9l-6.242.609L206.27,6.9,192.007,35.075l-6.066,1.837-27.516-15.5-8.5,30.429-5.569,2.987-30.021-9.847-2.392,31.555-4.834,3.976L75.693,76.7l3.81,31.423-3.966,4.824-31.556,2.393,9.848,30.03-2.987,5.569-30.425,8.488,15.5,27.506L34.075,193,5.907,207.265l20.606,23.988L25.9,237.49,1,257.01l24.9,19.515.609,6.237L5.907,306.75l28.168,14.262,1.842,6.071-15.5,27.506,30.425,8.488,2.987,5.58-9.848,30.02,31.546,2.388L79.5,405.9l-3.81,31.414,31.418-3.815,4.834,3.966,2.393,31.565,30.02-9.852,5.569,2.987,8.5,30.42,27.506-15.505L192,478.924l14.262,28.159,23.988-20.606,6.242.624L256.01,512l19.519-24.9,6.237-.624,23.984,20.606,14.262-28.159,6.071-1.846,27.506,15.5,8.5-30.419,5.57-2.987,30.02,9.852,2.392-31.565L404.9,433.5l31.414,3.815L432.5,405.9l3.966-4.833,31.555-2.388-9.847-30.02,2.982-5.58,30.424-8.488-15.5-27.506,1.841-6.071,28.164-14.262-20.6-23.988.609-6.237L511,257.01ZM364.212,428.356,352.59,410.332l17.975-11.64L382.2,416.7Zm-7.275-49.2-16.4,10.623-7.6,35.473L256,441.81,177.448,424.5l-7.6-35.473L153.46,378.412l-31.316,6.724L105.952,355.05H258.329l2.875-1.881v-42.9l-2.875-1.881H213.764V274.22h48.2l29.64,25.7,9,39.805L327.56,355.05h75.93l2.753-.273-17.269,31.26-32.037-6.885ZM146.185,427.616,128.2,415.975l11.626-18.024,17.985,11.655Zm-57.8-234.4-7.7,20.012L60.7,205.511,68.4,185.5ZM70.615,235.331l32.623-14.5,7.021-18.243L103.54,187.4h26.424V306.506H76.653l-7.105-51.143Zm143.159-11.567V188.656H276.7l22.95,18.487-27.535,16.616h-58.34Zm228.682,31.6-.511,13.843h-19.13l-2.685,3.133v8.786l-21.878,26.322L370,290l-24.007-43.676L380,195l-15-56-50.051-8.021H117.105L221.419,72.108l23.32,24.465,19.52.448,26.093-24.957L418,162.973l-17.863,40.345,7.026,18.243,34.391,15.276.906,18.526ZM244.749,51.3l21.41.492-.5,21.444-21.41-.5ZM422.016,193.953l19.978-7.713,7.7,20.011-19.983,7.719Z"
+                transform="translate(-1.005 -2)"
+              />
+            </g>
+            <path d="M669,69" fill="#fff" />
+          </svg>
+        </div>
+
+        <p>
+          Rust is my language of choice for projects where JS or other web
+          technologies aren't suitable. Some of the AWS lambda functions, deployment
+          tools, and bots I've implemented are written in Rust.
+        </p>
+      </section>
+    </div>
+
+    <!-- TODO: experience with JS, React, Node.js, Rust, Bash -->
+
+    <style>
+      /* utility for alignment */
+      [guideline-x],
+      [guideline-y] {
+        position: relative;
+      }
+      [guideline-x]::after {
         content: '';
         display: block;
         position: absolute;
         top: 0;
-        right: 0;
+        right: calc(50% - 1px);
         bottom: 0;
+        width: 3px;
+        background: white;
+      }
+
+      [guideline-y]::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 0;
         left: 0;
-        box-shadow: 0 0 5vmin rgba(0, 35, 90, 0.2);
-        border-radius: 3.5em;
-        z-index: -1;
-        background: transparent;
-      }
-
-      body {
-        box-shadow: inset 0 0 4vmin rgba(0, 35, 90, 0.3),
-          inset 0 0 10vmin rgba(0, 12, 55, 0.1);
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="wrapper">
-      <main class="main">
-        <header>
-          <h1>Frankie Bagnardi</h1>
-        </header>
-        <section class="about">
-          <p>f.bagnardi@gmail.com</p>
-          <section class="about-me">
-            <p>I enjoy creating great applications.</p>
-            <p>
-              My go-to tools currently are React.js, Webpack, react-router,
-              react-motion, babel, and others
-            </p>
-          </section>
-        </section>
-      </main>
-    </div>
-
-    <style>
-      html {
-        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAGh0lEQVR4Xt1b6W8TRxQ3aVH/j/YLKohiE4NxSEJUCBSJD5UKqAQcyGHHjq898LVeZ+Pd9YV311d85SAxhKpQqR+Qelc96d3SVm3VL+0/gloqp7JJ4rV3dnd84W/2vPnNe7958+bNm/EeDcDHL5DHogj9NYBo34nsqWrsF4ShKII86DvtISi8RQCsj4MMD2fp0Bew8DqBA5WAeYIZWWKDn4MozgolHYFYfgKRbaeMagKsfnK0EKU/g62kHfPvy3HRP8VwLXbPYCmX+AHGmKoJgKGEWoyJSfvQ5kZOUQzrWwJMJoe2Usk+VEte1wlwYNSLWY76o5khk5PmFzY2yn+pMfTipGP8zY3sB2IYXSdAjWEw+v6fB5D8cJRGJbcvnyCciCHIp3IHtnkJYz7OfiW3X03+0qWp5+/cWftbaf/t/V63IGfeKAnv1X7rqgfMziP7Hz169M96OSca7WEYLIXRdgJmUNSwwvPfSCnSrXZgAphicSQ4NweU5NSMuYbjR28mk9+227jz568eundv/Wcl4wAToAS8H/rIJiBSyA4FrI560oHEiSOCl/2uH4x9qrfBqxM2/fpm/vtmE3HZgp26XeI+3N3e0gP45VvD6OwVye0R1uxfmZs+cKu4+hssvCqOaQo/WVlLftQMU/YSgKlcJ7CmpoIn19YYMALCQu5YCLErrvwgDDEoBFlVp7Rp1KFd5dXn+NvJnbVSJzXPaTTLKaqBiKYewJcro6jZBP2Y24lZlzPGU78EpMiARgCzxBmD81g930cZxsAHg6ozQDROGXgvpRpHMgiSfGaURp094/JojDLyPkrxAWq7wSEsdSrMuRu2wKpM3QMCXHosgrk+2c1U+fbbr5gvv/qulCvBanfGFo5nfItf7sYjUsnjrBtv+F1s3KgvM+6POUXP/7LyAFhGqcUhcqkR1u6WdQ4BHbMhBiwmy6cXcPP7oABVufTm5phrYqLBe+RgIInIqOAJdHwJbhGALsbH+AWvKgPkGNtLsqK7QIgtnA4T1h1ekLv51ln7tdfegaU8xsRGuKAP2K2pQvYEZXXIrkZJ6QttG6wOJNy8dQK5dkWVkt4UMxJ377xcIfP8KG1DFS+PBL067iGnn/6iKLtYfJlYmPtYata3t0P1gN0DRworQwHrjKILCzlGqJFtGwGx8prRZ55SlcjATIYkM0ExAZtt4Xg+35iUqGG81/q2zQN6zVBFHtBpIxykQ5ul4dYCpGyQ7QEzVo9hpZBo2+lMSmHY7bIJgK2AWjxfOHk4FsJ/VIoDnQBfMqqP4f6m1dmqopEktS+AU8DXYebAdV05cqPpa5IAldBFKA/QaxMk4h8WAtF6oRc6AUpnolv9tgiYc/i0xWxM9WMDuUZQEf8+KiD+DEYulpS8i8T0aZpr8Mye8QA84DyQjGSg3glIkVJt7xkCxJS1eOyDpUQOqMxORjkt7ce2vBhn2YNJgvi1ZwigBPYQhRCKbm9BjKjKUAlBR3kQ0UDoovCDaSrZQEi1cNtTHoCFnYe5UKbplublOGMce1J5BiWnKucK4AfTkUYSeooAOQbBkgUi4MLk3NDdjeKDCxcsI3fvloCrOFuumckYKKezK5kjzrIHkgTREFgdJPlSlqZ/6UoQZLLxwaDD2zKwXU/4h294niQrsGYbIcn9Ak3/vh2vwQNqZ3AbRRjzlPKXXbVBKC5tHBh45rGaS1e5BIS5jDaEOYHyGqAlIFeBfpLvGgHx5bzBO2vbERvYEjdGWLCt8jy9ujROTs8D3e6oIbyjBMS5ZYNmr0bjdc4CBcVEpXLWYzLJLsUz8cKRoNcK9G6pIwREwrlj/w4MPA4Gd8446MxlKm+ec5ou3q/Jr1Tun5sxnat/B8XZLoeSYS1Phx5CIQCZJUeFZfj/GVBimNw+QASgBGPgWfV3/XKVgyVfm20xvJYEkMmUnsbdLYsbsJTsFs4epsAfCVpRoIAhpqTDShiyBRYoqHXLyFbj1j0gXswOeuccQEdPKUNILKqnudZlMSmMTrUDxQAQZWwuUp9P0323XEQJYHM5HWG3AxUZQchJRvOHcb9NceW2Nga/dOcMOn+p/mcHkLGlZKB5gNRAsNoTmfVxj/MqtAyx7wiQIhJFGQPPg2/ZwAR4mPhgItj6GCulXC+2AxFARlN62t+5fCCcyA+HPLaOvFIHIgB05lxh8qjm2b2adCDU9r/JeGOcMe5rrA/OuwO6pVRENICb3dd15dTOG6b/AGD8DRHJRnBEAAAAAElFTkSuQmCC');
-        background-size: 63px 67px;
-      }
-
-      body {
-        background-image: url('data:image/png;base64,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');
-        background-size: 139.3 90.3px;
+        height: 3px;
+        background: white;
       }
     </style>
   </body>
